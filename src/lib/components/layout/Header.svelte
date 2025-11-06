@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { Button, ToggleTheme } from "$lib";
+  import { Button, ToggleTheme } from "$lib/components";
   import { gsapFrom } from "$lib/utils/gsap";
 
   let width = $state(0);
   let menu = $state([
     { href: "/", text: "Home" },
-    { href: "/test", text: "About" },
+    { href: "/about", text: "About" },
     { href: "/", text: "Skills" },
     { href: "/", text: "Projects" },
     { href: "/", text: "Contact" },
@@ -15,7 +15,7 @@
 <svelte:window bind:innerWidth={width} />
 
 {#snippet nav(visible: boolean)}
-  <nav class="flex items-center justify-around p-10">
+  <nav class="flex items-center justify-around">
     {#if visible}
       <h1 class="text-4xl">矢作</h1>
     {/if}
@@ -39,7 +39,7 @@
   </nav>
 {/snippet}
 
-<header class="fixed top-0 w-full z-20" {@attach gsapFrom({ y: -15 })}>
+<header class="fixed top-0 w-full h-16 p-10 z-20" {@attach gsapFrom({ y: -15 })}>
   {#if width > 1024}
     {@render nav(true)}
   {:else}

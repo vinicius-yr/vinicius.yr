@@ -21,27 +21,17 @@ export function gsapTo(props: GSAPTweenVars) {
   }
 }
 
-export function gsapLights(props: GSAPTweenVars) {
+export function gsapLights(props: GSAPTweenVars, y: number) {
   return (element: HTMLElement) => {
-    gsap.fromTo(element, {x: -100}, {x: innerWidth, repeat: -1, yoyo: true, ...props})
+    gsap.fromTo(element, {x: -400, y: y}, {x: innerWidth, repeat: -1, yoyo: true, ...props})
   }
 }
 
-export function gsapLightsReverse(props: GSAPTweenVars) {
+export function gsapLightsReverse(props: GSAPTweenVars, y: number) {
   return (element: HTMLElement) => {
-    gsap.fromTo(element, {x: innerWidth}, {x: -100, repeat: -1, yoyo: true, ...props})
+    gsap.fromTo(element, {x: innerWidth, y: y}, {x: -400, repeat: -1, yoyo: true, ...props})
   }
 }
-
-export function gsapItems(props: GSAPTweenVars) {
-  return (element: HTMLElement) => {
-    gsap.from(element, {
-      ...props
-    })
-  }
-}
-
-
 
 export function gsapScrambleText(text: string) {
   return (element: HTMLElement) => {
