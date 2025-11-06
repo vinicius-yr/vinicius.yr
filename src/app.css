@@ -1,1 +1,25 @@
 @import 'tailwindcss';
+
+@theme {
+  --color-primary: var(--primary);
+  --color-background: var(--background);
+}
+
+@layer base {
+
+  :root {
+    --primary: black;
+    --background: white;
+  }
+
+
+  [data-theme='dark'] {
+    --primary: white;
+    --background: black;
+  }
+}
+
+body, html {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+}

@@ -14,29 +14,25 @@ export function gsapFrom(props: GSAPTweenVars) {
     })
   }
 }
+export function gsapItems(props: GSAPTweenVars) {
+  return (element: HTMLElement) => {
+    gsap.from(element, {
+      ...props
+    })
+  }
+}
 
 export function gsapTo(props: GSAPTweenVars) {
   return (element: HTMLElement) => {
     gsap.to(element, { ...props })
   }
 }
-export function gsapText() {
-  return (element: HTMLElement) => {
-    let text = SplitText.create(element, { type: "words", aria: "hidden" })
-    gsap.from(text.words, {
-      opacity: 0,
-      duration: 2,
-      ease: "sine.out",
-      stagger: 0.1,
-    });
-  }
-}
 
-export function gsapTexts(text: string) {
+export function gsapScrambleText(text: string) {
   return (element: HTMLElement) => {
     gsap.to(element, {
       duration: 1,
-      delay: 1,
+      delay: 0.5,
       scrambleText: text,
       ease: "power2.in"
     });
