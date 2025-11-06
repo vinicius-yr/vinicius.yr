@@ -5,7 +5,7 @@
   let width = $state(0);
   let menu = $state([
     { href: "/", text: "Home" },
-    { href: "/", text: "About" },
+    { href: "/test", text: "About" },
     { href: "/", text: "Skills" },
     { href: "/", text: "Projects" },
     { href: "/", text: "Contact" },
@@ -39,7 +39,7 @@
   </nav>
 {/snippet}
 
-<header class="fixed top-0 w-full" {@attach gsapFrom({ y: -15 })}>
+<header class="fixed top-0 w-full z-20" {@attach gsapFrom({ y: -15 })}>
   {#if width > 1024}
     {@render nav(true)}
   {:else}

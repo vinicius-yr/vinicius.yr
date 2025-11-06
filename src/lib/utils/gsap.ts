@@ -14,6 +14,25 @@ export function gsapFrom(props: GSAPTweenVars) {
     })
   }
 }
+
+export function gsapTo(props: GSAPTweenVars) {
+  return (element: HTMLElement) => {
+    gsap.to(element, { ...props })
+  }
+}
+
+export function gsapLights(props: GSAPTweenVars) {
+  return (element: HTMLElement) => {
+    gsap.fromTo(element, {x: -100}, {x: innerWidth, repeat: -1, yoyo: true, ...props})
+  }
+}
+
+export function gsapLightsReverse(props: GSAPTweenVars) {
+  return (element: HTMLElement) => {
+    gsap.fromTo(element, {x: innerWidth}, {x: -100, repeat: -1, yoyo: true, ...props})
+  }
+}
+
 export function gsapItems(props: GSAPTweenVars) {
   return (element: HTMLElement) => {
     gsap.from(element, {
@@ -22,11 +41,7 @@ export function gsapItems(props: GSAPTweenVars) {
   }
 }
 
-export function gsapTo(props: GSAPTweenVars) {
-  return (element: HTMLElement) => {
-    gsap.to(element, { ...props })
-  }
-}
+
 
 export function gsapScrambleText(text: string) {
   return (element: HTMLElement) => {

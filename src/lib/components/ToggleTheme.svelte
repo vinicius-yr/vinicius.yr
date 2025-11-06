@@ -12,8 +12,8 @@
 
 <button class="cursor-pointer" onclick={toggleTheme}>
   {#if isDark}
-    <Sun />
-  {:else}
     <Moon />
+  {:else}
+    <Sun />
   {/if}
 </button>
