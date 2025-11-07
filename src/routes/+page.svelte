@@ -6,19 +6,19 @@
   let socialButtons = $state([
     {
       href: "https://github.com/vinicius-yr",
-      icon: "line-md:github",
+      icon: "mdi:github",
     },
     {
       href: "https://www.linkedin.com/in/vinicius-y-rios-360432397",
-      icon: "ri:linkedin-fill",
+      icon: "basil:linkedin-solid",
     },
   ]);
 </script>
 
 <section class="h-[calc(100vh-5rem)] flex flex-col justify-center items-center">
   <div class="relative">
-    <h1 {@attach gsapFrom({ y: 50 })} class="text-4xl lg:text-6xl">
-      Software Developer
+    <h1 {@attach gsapFrom({ y: 50 })} class="text-4xl lg:text-4xl">
+      Full-Stack Software Developer
     </h1>
     <div class="absolute">
       <p {@attach gsapScrambleText("VINICIUS YAHAGI RIOS")} class="text-sm"></p>

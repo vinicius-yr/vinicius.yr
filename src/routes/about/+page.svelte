@@ -16,7 +16,7 @@
       text: `Outside of programming, I have a strong interest in philosophy, psychology and music. I also enjoy spending my free time playing game, reading books, creating music or coding.`,
     },
     {
-      subtitle: "Intrapessoal Skills",
+      subtitle: "Intrapersonal Skills",
       text: `Problem-solving, Logical reasoning, Continuous learning, Self-taught, Effective communication.`,
     },
   ]);
