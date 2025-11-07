@@ -16,7 +16,7 @@
   <div
     class="{border
       ? 'border rounded-sm'
-      : ''} flex gap-2 p-2 cursor-pointer duration-300 hover:translate-y-1"
+      : ''} p-2 cursor-pointer duration-300 hover:translate-y-1"
   >
     {@render children()}
   </div>

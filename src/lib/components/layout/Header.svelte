@@ -6,7 +6,6 @@
   let menu = $state([
     { href: "/", text: "Home" },
     { href: "/about", text: "About" },
-    { href: "/", text: "Skills" },
     { href: "/", text: "Projects" },
     { href: "/", text: "Contact" },
   ]);
