@@ -11,7 +11,7 @@
   }
 </script>
 
-<Button onclick={toggleTheme} border={false}>
+<Button onclick={toggleTheme} >
   {#if isDark}
     <Icon icon="tabler:moon" width="24" height="24" />
   {:else}

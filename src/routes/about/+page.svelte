@@ -25,15 +25,15 @@
 <section class="h-[calc(100vh-5rem)] flex justify-center items-center">
   <div class="flex flex-col gap-8">
     {#each informations as { subtitle, text }, index}
-      <div {@attach gsapFrom({ opacity: 0, delay: index * 0.3 })}>
+      <div {@attach gsapFrom({ opacity: 0, delay: index * 0.2 })} >
         <h1 class="text-xl">{subtitle}</h1>
         <p class="text-sm max-w-4xl">{text}</p>
       </div>
     {/each}
-    <i {@attach gsapFrom({ delay: 4 * 0.3 })} class="text-sm"
+    <i {@attach gsapFrom({ delay: 4 * 0.2 })} class="text-sm"
       >"The simple is the visible part of complexity."</i
     >
-    <div class="max-w-4xl" {@attach gsapFrom({ delay: 5 * 0.3 })}>
+    <div class="max-w-4xl" {@attach gsapFrom({ delay: 5 * 0.2 })}>
       <Skills />
     </div>
   </div>

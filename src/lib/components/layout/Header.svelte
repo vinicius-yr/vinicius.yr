@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { Button, ToggleTheme } from "$lib/components";
+  import { ToggleTheme } from "$lib/components";
   import { gsapFrom } from "$lib/utils/gsap";
 
   let width = $state(0);
   let menu = $state([
     { href: "/", text: "Home" },
     { href: "/about", text: "About" },
-    { href: "/", text: "Projects" },
+    { href: "/projects", text: "Projects" },
     { href: "/", text: "Contact" },
   ]);
 </script>
@@ -30,9 +30,6 @@
           </a>
         </li>
       {/each}
-      {#if visible}
-        <li><Button>Resume</Button></li>
-      {/if}
     </ul>
     <ToggleTheme />
   </nav>

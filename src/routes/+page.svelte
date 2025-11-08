@@ -22,10 +22,10 @@
     </h1>
     <div class="absolute">
       <p {@attach gsapScrambleText("VINICIUS YAHAGI RIOS")} class="text-sm"></p>
-      <div {@attach gsapFrom({ delay: 1.5 })} class="flex gap-1 mt-1">
+      <div {@attach gsapFrom({ delay: 1.5 })} class="flex gap-3 mt-1">
         {#each socialButtons as { href, icon }}
           <Button {href}>
-            <Icon {icon} width="25" height="25" />
+            <Icon {icon} width="28" height="28" />
           </Button>
         {/each}
       </div>

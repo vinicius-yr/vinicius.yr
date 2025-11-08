@@ -3,7 +3,6 @@
   import Icon from "@iconify/svelte";
 
   const techs = $state([
-    // Languages
     {
       name: "JavaScript",
       href: "https://developer.mozilla.org/docs/Web/JavaScript",
@@ -23,7 +22,6 @@
       icon: "file-icons:go",
     },
 
-    // Frontend
     {
       name: "HTML",
       href: "https://developer.mozilla.org/docs/Web/HTML",
@@ -55,7 +53,6 @@
       icon: "lineicons:tailwindcss",
     },
 
-    // Backend
     {
       name: "Node.js",
       href: "https://nodejs.org/",
@@ -75,7 +72,6 @@
       icon: "devicon-plain:fastify",
     },
 
-    // Database
     {
       name: "SQL",
       href: "https://en.wikipedia.org/wiki/SQL",
@@ -107,7 +103,6 @@
       icon: "simple-icons:drizzle",
     },
 
-    // Tools
     {
       name: "Git",
       href: "https://git-scm.com/",
@@ -126,16 +121,16 @@
       href: "https://wails.io/",
       tech: "tools",
       icon: "simple-icons:wails",
-    }, // Corrigi para o link oficial do Wails
+    },
   ]);
 </script>
 
 <section class="flex flex-col">
   <h1 class="text-xl">Tech Stack</h1>
-  <div class="flex flex-wrap gap-1">
+  <div class="flex flex-wrap gap-5">
     {#each techs as { href, icon }}
-      <Button {href} border={false}>
-        <Icon {icon} width="35" height="35" />
+      <Button {href}>
+        <Icon {icon} width="34" height="34" />
       </Button>
     {/each}
   </div>

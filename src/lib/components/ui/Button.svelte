@@ -5,18 +5,14 @@
     href?: string;
     children: Snippet;
     onclick?: (e: Event) => void;
-    border?: boolean;
-    index?: number;
   }
 
-  let { href, children, onclick, border = true, ...props }: Props = $props();
+  let { href, children, onclick, ...props }: Props = $props();
 </script>
 
 {#snippet content()}
   <div
-    class="{border
-      ? 'border rounded-sm'
-      : ''} p-2 cursor-pointer duration-300 hover:translate-y-1"
+    class="cursor-pointer duration-300 hover:translate-y-1"
   >
     {@render children()}
   </div>
