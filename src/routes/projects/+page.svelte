@@ -2,7 +2,7 @@
   import { Button } from "$lib/components";
   import { gsapFrom } from "$lib/utils/gsap";
   import Icon from "@iconify/svelte";
-    import { blur, fade, slide } from "svelte/transition";
+  import { fade } from "svelte/transition";
 
   interface Projects {
     name: string;
