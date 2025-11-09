@@ -35,7 +35,7 @@
   </nav>
 {/snippet}
 
-<header class="fixed top-0 w-full h-16 p-10 z-20" {@attach gsapFrom({ y: -15 })}>
+<header class="p-5" {@attach gsapFrom({ y: -15 })}>
   {#if width > 1024}
     {@render nav(true)}
   {:else}

@@ -4,11 +4,11 @@ import { SplitText } from "gsap/SplitText"
 import TextPlugin from "gsap/TextPlugin"
 gsap.registerPlugin(TextPlugin, SplitText, ScrambleTextPlugin)
 
-export function gsapFrom(props: GSAPTweenVars) {
+export function gsapFrom(props?: GSAPTweenVars) {
   return (element: HTMLElement) => {
     gsap.from(element, {
       opacity: 0,
-      x: 30,
+      y: 30,
       ease: "power3",
       ...props
     })

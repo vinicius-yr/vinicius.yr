@@ -22,17 +22,15 @@
   ]);
 </script>
 
-<section class="h-screen flex justify-center items-center">
-  <div class="grid gap-9" {@attach gsapFrom({delay: 0.2})}>
-    {#each informations as { subtitle, text }, index}
+<section class="h-[calc(100vh-5rem)] grid place-items-center">
+  <div class="grid gap-9" {@attach gsapFrom({ delay: 0.2 })}>
+    {#each informations as { subtitle, text }}
       <div>
         <h1 class="text-xl">{subtitle}</h1>
         <p class="text-sm max-w-4xl">{text}</p>
       </div>
     {/each}
-    <i class="text-sm"
-      >"The simple is the visible part of complexity."</i
-    >
+    <i class="text-sm">"The simple is the visible part of complexity."</i>
     <div class="max-w-4xl">
       <Skills />
     </div>

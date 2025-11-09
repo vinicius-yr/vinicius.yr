@@ -72,7 +72,7 @@
 </script>
 
 <section
-  class="h-screen flex justify-center items-center"
+  class="h-[calc(100vh-5rem)] flex justify-center items-center"
   {@attach gsapFrom({ delay: 0.2 })}
 >
   <Button onclick={back}>
