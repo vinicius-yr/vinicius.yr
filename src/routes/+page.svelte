@@ -15,17 +15,17 @@
   ]);
 </script>
 
-<section class="h-[calc(100vh-5rem)] flex flex-col justify-center items-center">
-  <div class="relative">
-    <h1 {@attach gsapFrom({ y: 50 })} class="text-4xl lg:text-4xl">
-      Full-Stack Software Developer
+<section class="h-screen flex flex-col justify-center items-center">
+  <div>
+    <h1 class="text-4xl lg:text-5xl" {@attach gsapFrom({ y: 50 })}>
+      Full-Stack Developer
     </h1>
     <div class="absolute">
-      <p {@attach gsapScrambleText("VINICIUS YAHAGI RIOS")} class="text-sm"></p>
-      <div {@attach gsapFrom({ delay: 1.5 })} class="flex gap-3 mt-1">
+      <p class="text-sm" {@attach gsapScrambleText("VINICIUS YAHAGI RIOS")}></p>
+      <div {@attach gsapFrom({ delay: 1.5 })} class="flex gap-1 mt-1">
         {#each socialButtons as { href, icon }}
-          <Button {href}>
-            <Icon {icon} width="28" height="28" />
+          <Button {href} border={true}>
+            <Icon {icon} width="35" height="35" />
           </Button>
         {/each}
       </div>

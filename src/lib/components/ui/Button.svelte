@@ -5,9 +5,10 @@
     href?: string;
     children: Snippet;
     onclick?: (e: Event) => void;
+    border?: boolean;
   }
 
-  let { href, children, onclick, ...props }: Props = $props();
+  let { href, children, onclick, border = false, ...props }: Props = $props();
 </script>
 
 {#snippet content()}

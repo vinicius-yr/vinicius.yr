@@ -7,7 +7,7 @@
     { href: "/", text: "Home" },
     { href: "/about", text: "About" },
     { href: "/projects", text: "Projects" },
-    { href: "/", text: "Contact" },
+    { href: "/contact", text: "Contact" },
   ]);
 </script>
 
@@ -20,8 +20,8 @@
     {/if}
 
     <ul class="flex items-center gap-5 text-sm">
-      {#each menu as { href, text }}
-        <li>
+      {#each menu as { href, text }, index}
+        <li {@attach gsapFrom({delay: index * 0.3})}>
           <a
             class="border-b border-b-transparent duration-300 hover:border-b-primary"
             {href}

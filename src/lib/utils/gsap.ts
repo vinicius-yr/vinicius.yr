@@ -8,7 +8,7 @@ export function gsapFrom(props: GSAPTweenVars) {
   return (element: HTMLElement) => {
     gsap.from(element, {
       opacity: 0,
-      duration: 1,
+      x: 30,
       ease: "power3",
       ...props
     })

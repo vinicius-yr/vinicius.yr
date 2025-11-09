@@ -127,10 +127,10 @@
 
 <section class="flex flex-col">
   <h1 class="text-xl">Tech Stack</h1>
-  <div class="flex flex-wrap gap-5">
+  <div class="flex flex-wrap gap-3">
     {#each techs as { href, icon }}
       <Button {href}>
-        <Icon {icon} width="34" height="34" />
+        <Icon {icon} width="40" height="40" />
       </Button>
     {/each}
   </div>
