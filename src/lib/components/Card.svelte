@@ -2,8 +2,8 @@
   import Icon from "@iconify/svelte";
   import { Button } from ".";
   import "@splidejs/svelte-splide/css";
-  import { Splide, SplideSlide, type Options } from "@splidejs/svelte-splide";
-    import gsap from "gsap";
+  import { Splide, SplideSlide } from "@splidejs/svelte-splide";
+  import gsap from "gsap";
 
   interface Projects {
     name: string;
@@ -47,8 +47,8 @@
   ]);
 
   $effect(() => {
-    gsap.from("#splide", {opacity: 0})
-  })
+    gsap.from("#splide", { opacity: 0 });
+  });
 </script>
 
 <Splide

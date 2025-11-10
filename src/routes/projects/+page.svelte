@@ -1,8 +1,5 @@
 <script lang="ts">
   import { Card } from "$lib/components";
-
-
-  // Trocar gsap por splide.js e criar um componente card.
 </script>
 
 
