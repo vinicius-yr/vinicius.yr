@@ -25,10 +25,10 @@
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          alert("Sent successfully!");
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          alert("Sorry try again...");
         },
       );
 
@@ -38,7 +38,11 @@
   };
 </script>
 
-<form class="flex flex-col gap-3 w-full max-w-lg px-4" bind:this={form} onsubmit={sendEmail}>
+<form
+  class="flex flex-col gap-3 w-full max-w-lg px-4"
+  bind:this={form}
+  onsubmit={sendEmail}
+>
   <label for="">Name</label>
   <input
     class="border rounded-sm p-2 outline-0"
@@ -46,6 +50,7 @@
     placeholder="John Doe"
     name="name"
     bind:value={name}
+    required
   />
   <label for="">Email</label>
   <input
@@ -54,14 +59,16 @@
     placeholder="name@exemple.com"
     name="email"
     bind:value={email}
+    required
   />
   <label for="">Message</label>
   <textarea
     class="border rounded-sm p-2 outline-0 min-h-60"
-    minlength="30"
-    placeholder="..."
+    minlength="70"
+    placeholder="Minimum: 70 characters"
     name="message"
     bind:value={message}
+    required
   ></textarea>
   <button class="border rounded-sm p-2 text-sm cursor-pointer" type="submit"
     >Submit</button
