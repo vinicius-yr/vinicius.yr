@@ -72,13 +72,10 @@
 </script>
 
 <section
-  class="h-[calc(100vh-5rem)] flex justify-center items-center"
+  class="min-h-[calc(100vh-5rem)] flex justify-center items-center"
   {@attach gsapFrom({ delay: 0.2 })}
 >
-  <Button onclick={back}>
-    <Icon icon="material-symbols:arrow-left" width="70" />
-  </Button>
-  <div class="w-1/2">
+  <div class="lg:w-1/2 px-5 grid place-items-center gap-5">
     {#each projects[index] as { name, techs, href, git, text, date, src }}
       {#key index}
         <div
@@ -88,7 +85,7 @@
           <h1 class="text-lg">{name}</h1>
           <p class="text-sm">{text}</p>
           <p class="text-sm">{date}</p>
-          <img {src} alt="" />
+          <img {src} class=" lg:block md:block" alt="" />
           <div class="flex justify-between items-end w-full">
             <ul class="flex gap-2 items-center max-w- flex-wrap">
               {#each techs as tech}
@@ -109,8 +106,13 @@
         </div>
       {/key}
     {/each}
+    <div>
+      <Button onclick={back}>
+        <Icon icon="material-symbols:arrow-left" width="50" />
+      </Button>
+      <Button onclick={next}>
+        <Icon icon="material-symbols:arrow-right" width="50" />
+      </Button>
+    </div>
   </div>
-  <Button onclick={next}>
-    <Icon icon="material-symbols:arrow-right" width="70" />
-  </Button>
 </section>

@@ -22,10 +22,10 @@
   ]);
 </script>
 
-<section class="h-[calc(100vh-5rem)] grid place-items-center">
-  <div class="grid gap-9" {@attach gsapFrom({ delay: 0.2 })}>
+<section class="min-h-[calc(100vh-5rem)] grid place-items-center">
+  <div class="grid gap-9 p-5" {@attach gsapFrom({ delay: 0.2 })}>
     {#each informations as { subtitle, text }}
-      <div>
+      <div class="">
         <h1 class="text-xl">{subtitle}</h1>
         <p class="text-sm max-w-4xl">{text}</p>
       </div>

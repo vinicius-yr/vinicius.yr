@@ -15,8 +15,8 @@
   ]);
 </script>
 
-<section class="h-[calc(100vh-5rem)] grid place-items-center">
-  <div >
+<section class="min-h-[calc(100vh-5rem)] flex flex-col justify-center items-center">
+  <div class="px-5">
     <h1 class="text-2xl lg:text-5xl" {@attach gsapFrom()}>
       Full-Stack Developer
     </h1>

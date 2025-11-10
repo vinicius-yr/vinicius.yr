@@ -38,7 +38,7 @@
   };
 </script>
 
-<form class="flex flex-col gap-3" bind:this={form} onsubmit={sendEmail}>
+<form class="flex flex-col gap-3 w-full max-w-lg px-4" bind:this={form} onsubmit={sendEmail}>
   <label for="">Name</label>
   <input
     class="border rounded-sm p-2 outline-0"
@@ -57,10 +57,8 @@
   />
   <label for="">Message</label>
   <textarea
-    class="border rounded-sm p-2 outline-0"
+    class="border rounded-sm p-2 outline-0 min-h-60"
     minlength="30"
-    cols="50"
-    rows="7"
     placeholder="..."
     name="message"
     bind:value={message}
