@@ -16,21 +16,30 @@
 
   $effect(() => {
     gsap.from("#header", { opacity: 0, y: 10, ease: "sine.inOut" });
-    gsap.from("#navItems", { opacity: 0, ease: "sine.inOut", stagger: 0.1, delay: 0.5,});
+    gsap.from("#navItems", { opacity: 0, ease: "sine.inOut", stagger: 0.1, delay: 0.5 });
   });
 </script>
 
 <svelte:window bind:innerWidth={width} />
 
-{#snippet items(href: string, text: string)}
+{#snippet items(href: string, text: string, mobile: boolean)}
   <li id="navItems">
-    <a
-      onclick={() => (isOpen = !isOpen)}
-      class="border-b border-b-transparent duration-300 hover:border-b-primary"
-      {href}
-    >
-      {text}
-    </a>
+    {#if !mobile}
+      <a
+        class="border-b border-b-transparent duration-300 hover:border-b-primary"
+        {href}
+      >
+        {text}
+      </a>
+    {:else}
+      <a
+        onclick={() => (isOpen = !isOpen)}
+        class="border-b border-b-transparent duration-300 hover:border-b-primary"
+        {href}
+      >
+        {text}
+      </a>
+    {/if}
   </li>
 {/snippet}
 
@@ -40,7 +49,7 @@
       <h1 class="text-4xl">矢作</h1>
       <ul class="flex items-center gap-5 text-sm">
         {#each menu as { href, text }}
-          {@render items(href, text)}
+          {@render items(href, text, false)}
         {/each}
       </ul>
       <ToggleTheme />
@@ -61,7 +70,7 @@
   >
     <ul class="flex flex-col items-center gap-5 text-sm">
       {#each menu as { href, text }}
-        {@render items(href, text)}
+        {@render items(href, text, true)}
       {/each}
       <li>
         <Button onclick={() => (isOpen = !isOpen)}>Close</Button>

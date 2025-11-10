@@ -34,7 +34,7 @@
 </script>
 
 <form
-  class="flex flex-col gap-3 w-full max-w-xl px-4"
+  class="flex flex-col gap-3 w-full max-w-xl p-4"
   bind:this={form}
   onsubmit={sendEmail}
 >

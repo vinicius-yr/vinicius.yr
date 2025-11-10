@@ -25,6 +25,7 @@
 	},
 	"dependencies": {
 		"@emailjs/browser": "^4.4.1",
+		"@splidejs/svelte-splide": "^0.2.9",
 		"gsap": "^3.13.0",
 		"valibot": "^1.1.0"
 	}
