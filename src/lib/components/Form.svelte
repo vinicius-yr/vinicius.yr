@@ -1,10 +1,7 @@
 <script lang="ts">
   import emailjs from "@emailjs/browser";
-  import {
-    PUBLIC_KEY,
-    PUBLIC_SERVICE_ID,
-    PUBLIC_TEMPLATE_ID,
-  } from "$env/static/public";
+  import { PUBLIC_KEY } from "$env/static/public";
+  import { SERVICE_ID, TEMPLATE_ID } from "$env/static/private";
 
   let form: HTMLFormElement;
 
@@ -20,7 +17,7 @@
 
   const sendEmail = (e: Event) => {
     emailjs
-      .sendForm(PUBLIC_SERVICE_ID, PUBLIC_TEMPLATE_ID, form, {
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form, {
         publicKey: PUBLIC_KEY,
       })
       .then(
