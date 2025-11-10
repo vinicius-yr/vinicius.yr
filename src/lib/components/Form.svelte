@@ -1,7 +1,5 @@
 <script lang="ts">
   import emailjs from "@emailjs/browser";
-  import { PUBLIC_KEY } from "$env/static/public";
-  import { SERVICE_ID, TEMPLATE_ID } from "$env/static/private";
 
   let form: HTMLFormElement;
 
@@ -17,8 +15,8 @@
 
   const sendEmail = (e: Event) => {
     emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, form, {
-        publicKey: PUBLIC_KEY,
+      .sendForm(import.meta.env.SERVICE_ID, import.meta.env.TEMPLATE_ID, form, {
+        publicKey: import.meta.env.PUBLIC_KEY,
       })
       .then(
         () => {
@@ -36,7 +34,7 @@
 </script>
 
 <form
-  class="flex flex-col gap-3 w-full max-w-lg px-4"
+  class="flex flex-col gap-3 w-full max-w-xl px-4"
   bind:this={form}
   onsubmit={sendEmail}
 >

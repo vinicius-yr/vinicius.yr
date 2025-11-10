@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Skills } from "$lib/components";
-  import { gsapFrom } from "$lib/utils/gsap";
+  import gsap from "gsap";
 
   let informations = $state([
     {
@@ -20,19 +20,27 @@
       text: `Problem-solving, Logical reasoning, Continuous learning, Self-taught, Effective communication.`,
     },
   ]);
+
+  $effect(() => {
+    gsap.from("#texts", { opacity: 0, stagger: 0.3 });
+    gsap.from("#phrase", { opacity: 0, delay: 1.2 });
+    gsap.from("#stacks", { opacity: 0, delay: 1.5 });
+  });
 </script>
 
 <section class="min-h-[calc(100vh-5rem)] grid place-items-center">
-  <div class="grid gap-9 p-5" {@attach gsapFrom({ delay: 0.2 })}>
+  <ul class="grid gap-9 p-5">
     {#each informations as { subtitle, text }}
-      <div class="">
+      <li id="texts">
         <h1 class="text-xl">{subtitle}</h1>
         <p class="text-sm max-w-4xl">{text}</p>
-      </div>
+      </li>
     {/each}
-    <i class="text-sm">"The simple is the visible part of complexity."</i>
-    <div class="max-w-4xl">
+    <i id="phrase" class="text-sm"
+      >"The simple is the visible part of complexity."</i
+    >
+    <div id="stacks" class="max-w-4xl">
       <Skills />
     </div>
-  </div>
+  </ul>
 </section>

@@ -1,8 +1,8 @@
 <script lang="ts">
   import { Button } from "$lib/components";
-  import { gsapFrom } from "$lib/utils/gsap";
-  import Icon from "@iconify/svelte";
   import { fade } from "svelte/transition";
+  import Icon from "@iconify/svelte";
+    import gsap from "gsap";
 
   interface Projects {
     name: string;
@@ -51,6 +51,11 @@
   ]);
 
   let index = $state(0);
+  let visible = $state(false);
+
+  $effect(() => {
+    visible = true;
+  });
 
   function next() {
     if (index >= projects.length - 1) {
@@ -68,51 +73,48 @@
     }
   }
 
-  $inspect(index, projects.length - 1);
+  // Trocar gsap por splide.js e criar um componente card.
 </script>
 
-<section
-  class="min-h-[calc(100vh-5rem)] flex justify-center items-center"
-  {@attach gsapFrom({ delay: 0.2 })}
->
-  <div class="lg:w-1/2 px-5 grid place-items-center gap-5">
-    {#each projects[index] as { name, techs, href, git, text, date, src }}
-      {#key index}
-        <div
-          class="flex flex-col justify-between gap-3 p-3 border rounded-sm"
-          in:fade
-        >
-          <h1 class="text-lg">{name}</h1>
-          <p class="text-sm">{text}</p>
-          <p class="text-sm">{date}</p>
-          <img {src} class=" lg:block md:block" alt="" />
-          <div class="flex justify-between items-end w-full">
-            <ul class="flex gap-2 items-center max-w- flex-wrap">
-              {#each techs as tech}
-                <li class="border p-1 text-sm rounded-sm">{tech}</li>
-              {/each}
-            </ul>
-            <div class="flex gap-1">
-              <Button href={git}>
-                <Icon icon="mdi:github" width="28" />
-              </Button>
-              {#if href}
-                <Button {href}>
-                  <Icon icon="mdi:internet" width="28" />
+  <section class="min-h-[calc(100vh-5rem)] flex justify-center items-center">
+    <div class="lg:w-1/2 px-5 grid place-items-center gap-5">
+      {#each projects[index] as { name, techs, href, git, text, date, src }}
+        {#key index}
+          <div
+            class="flex flex-col justify-between gap-3 p-3 border rounded-sm"
+            in:fade={{ delay: 200 }}
+          >
+            <h1 class="text-lg">{name}</h1>
+            <p class="text-sm">{text}</p>
+            <p class="text-sm">{date}</p>
+            <img {src} class=" lg:block md:block" alt="" />
+            <div class="flex justify-between items-end w-full">
+              <ul class="flex gap-2 items-center max-w- flex-wrap">
+                {#each techs as tech}
+                  <li class="border p-1 text-sm rounded-sm">{tech}</li>
+                {/each}
+              </ul>
+              <div class="flex gap-1">
+                <Button href={git}>
+                  <Icon icon="mdi:github" width="28" />
                 </Button>
-              {/if}
+                {#if href}
+                  <Button {href}>
+                    <Icon icon="mdi:internet" width="28" />
+                  </Button>
+                {/if}
+              </div>
             </div>
           </div>
-        </div>
-      {/key}
-    {/each}
-    <div>
-      <Button onclick={back}>
-        <Icon icon="material-symbols:arrow-left" width="50" />
-      </Button>
-      <Button onclick={next}>
-        <Icon icon="material-symbols:arrow-right" width="50" />
-      </Button>
+        {/key}
+      {/each}
+      <div>
+        <Button onclick={back}>
+          <Icon icon="material-symbols:arrow-left" width="50" />
+        </Button>
+        <Button onclick={next}>
+          <Icon icon="material-symbols:arrow-right" width="50" />
+        </Button>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
