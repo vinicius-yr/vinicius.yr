@@ -1,6 +1,6 @@
 <script lang="ts">
   import Icon from "@iconify/svelte";
-  import Button from "./ui/Button.svelte";
+  import Button from "./Button.svelte";
 
   let isDark = $state(false);
   let theme = $derived(isDark ? "dark" : "");

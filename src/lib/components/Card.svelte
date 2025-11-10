@@ -65,10 +65,10 @@
     breakpoints: {
       1024: {
         width: "45rem",
-        padding: 0,
       },
       719: {
         width: "30rem",
+        padding: 0,
       },
       500: {
         width: "22rem",
