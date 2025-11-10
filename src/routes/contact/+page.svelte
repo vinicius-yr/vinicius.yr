@@ -5,6 +5,7 @@
 
 <section
   class="min-h-[calc(100vh-5rem)] flex flex-col justify-center items-center"
+  {@attach gsapFrom()}
 >
   <p class="text-sm max-w-lg px-4 mb-5">
     Hi, I’m available for new projects and opportunities. If you have an idea,
