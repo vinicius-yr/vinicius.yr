@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Form } from "$lib/components";
-    import gsap from "gsap";
+  import gsap from "gsap";
 
   $effect(() => {
     gsap.from("#form", {opacity: 0})

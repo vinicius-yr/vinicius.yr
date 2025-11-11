@@ -1,7 +1,6 @@
 export { default as Button } from "./ui/Button.svelte"
 export { default as Header } from "./layout/Header.svelte"
 export { default as ToggleTheme } from "./ui/ToggleTheme.svelte"
-export { default as Lights } from "./Lights.svelte"
 export { default as Skills } from "./Skills.svelte"
 export { default as Form } from "./ui/Form.svelte"
 export { default as Card } from "./Card.svelte"

@@ -1,9 +1,5 @@
 <script lang="ts">
-  import {
-    PUBLIC_PUBLIC_KEY,
-    PUBLIC_SERVICE_ID,
-    PUBLIC_TEMPLATE_ID,
-  } from "$env/static/public";
+  import { PUBLIC_KEY, PUBLIC_SERVICE_ID, PUBLIC_TEMPLATE_ID } from "$env/static/public";
   import emailjs from "@emailjs/browser";
 
   let form: HTMLFormElement;
@@ -14,20 +10,19 @@
   const sendEmail = (e: Event) => {
     emailjs
       .sendForm(PUBLIC_SERVICE_ID, PUBLIC_TEMPLATE_ID, form, {
-        publicKey: PUBLIC_PUBLIC_KEY,
+        publicKey: PUBLIC_KEY,
       })
       .then(
         () => {
           alert("Sent successfully!");
+          name = "";
+          email = "";
+          message = "";
         },
         (error) => {
           alert("Sorry try again..." + error);
         },
       );
-
-    name = "";
-    email = "";
-    message = "";
   };
 </script>
 
