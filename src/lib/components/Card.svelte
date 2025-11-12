@@ -29,7 +29,7 @@
     {
       name: "ひragana.ok",
       techs: ["SvelteKit", "Tailwindcss", "DaisyUI"],
-      href: "https://hiragana-challenge-ten.vercel.app/",
+      href: "https://hiraganaok.pages.dev",
       git: "https://github.com/vinicius-yr/hiragana-challenge",
       text: "A website for practicing hiragana quickly and easily, with a mini-game to test your skills rapidly.",
       date: "Sep/18/25",
@@ -39,7 +39,7 @@
     {
       name: "Mimo Projects",
       techs: ["React", "Sass"],
-      href: "https://mimo-projects.vercel.app/",
+      href: "https://mimo-projects.pages.dev",
       git: "https://github.com/vinicius-yr/mimo_projects",
       text: "One of the first independent projects I did after completing my programming course.",
       date: "Feb/21/24",
