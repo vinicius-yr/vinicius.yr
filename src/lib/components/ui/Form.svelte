@@ -1,17 +1,25 @@
 <script lang="ts">
-  import { PUBLIC_KEY, PUBLIC_SERVICE_ID, PUBLIC_TEMPLATE_ID } from "$env/static/public";
+  import {
+    PUBLIC_KEY,
+    PUBLIC_SERVICE_ID,
+    PUBLIC_TEMPLATE_ID,
+  } from "$env/static/public";
   import emailjs from "@emailjs/browser";
 
-  let form: HTMLFormElement;
   let name = $state("");
   let email = $state("");
   let message = $state("");
 
-  const sendEmail = (e: Event) => {
+  const sendEmail = () => {
     emailjs
-      .sendForm(PUBLIC_SERVICE_ID, PUBLIC_TEMPLATE_ID, form, {
-        publicKey: PUBLIC_KEY,
-      })
+      .send(
+        PUBLIC_SERVICE_ID,
+        PUBLIC_TEMPLATE_ID,
+        { name, email, message },
+        {
+          publicKey: PUBLIC_KEY,
+        },
+      )
       .then(
         () => {
           alert("Sent successfully!");
@@ -26,11 +34,7 @@
   };
 </script>
 
-<form
-  class="flex flex-col gap-3 w-full max-w-xl p-4"
-  bind:this={form}
-  onsubmit={sendEmail}
->
+<form class="flex flex-col gap-3 w-full max-w-xl p-4" onsubmit={sendEmail}>
   <label for="">Name</label>
   <input
     class="border rounded-sm p-2 outline-0"

@@ -10,12 +10,12 @@
 
   let path = $derived(page.url.pathname);
 
-  let menu = $state([
+  let menu = [
     { href: "/", text: "Home" },
     { href: "/about", text: "About" },
     { href: "/projects", text: "Projects" },
     { href: "/contact", text: "Contact" },
-  ]);
+  ]
 
   $effect(() => {
     gsap.from("#header", { opacity: 0, y: 10, ease: "sine.inOut" });

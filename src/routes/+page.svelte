@@ -4,7 +4,7 @@
   import ScrambleTextPlugin from "gsap/ScrambleTextPlugin";
   import { Button } from "$lib/components";
 
-  let socialButtons = $state([
+  let socialButtons = [
     {
       href: "https://github.com/vinicius-yr",
       icon: "mdi:github",
@@ -13,7 +13,7 @@
       href: "https://www.linkedin.com/in/vinicius-y-rios-360432397",
       icon: "basil:linkedin-solid",
     },
-  ]);
+  ];
 
   $effect(() => {
     gsap.registerPlugin(ScrambleTextPlugin)

@@ -2,7 +2,7 @@
   import Button from "$lib/components/ui/Button.svelte";
   import Icon from "@iconify/svelte";
 
-  const techs = $state([
+  const techs = [
     {
       name: "JavaScript",
       href: "https://developer.mozilla.org/docs/Web/JavaScript",
@@ -122,7 +122,7 @@
       tech: "tools",
       icon: "simple-icons:wails",
     },
-  ]);
+  ]
 </script>
 
 <section class="flex flex-col">

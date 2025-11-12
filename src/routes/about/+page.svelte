@@ -2,7 +2,7 @@
   import { Skills } from "$lib/components";
   import gsap from "gsap";
 
-  let informations = $state([
+  let informations = [
     {
       subtitle: "Professional Summary",
       text: `Developer with 3 years of experience, specializing in high-performance applications. Solid experience in development creating responsive and interactive interfaces, REST APIs, relational database, authentication (Auth, OAuth, JWT), and LLMs. Focused on delivering complete, optimized, and scalable solutions. Crafting efficient systems that transform complex problems into simple and intuitive user experiences.`,
@@ -19,7 +19,7 @@
       subtitle: "Intrapersonal Skills",
       text: `Problem-solving, Logical reasoning, Continuous learning, Self-taught, Effective communication.`,
     },
-  ]);
+  ]
 
   $effect(() => {
     gsap.from("#texts", { opacity: 0, stagger: 0.3 });
