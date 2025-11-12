@@ -4,9 +4,7 @@
   import "@splidejs/svelte-splide/css";
   import { Splide, SplideSlide } from "@splidejs/svelte-splide";
   import gsap from "gsap";
-
-  const modules = import.meta.glob("$lib/assets/images/*", { eager: true });
-  const images = Object.entries(modules);
+  import { hiraganaImage, mimoImage, portifolioImage } from "$lib/assets";
 
   interface Projects {
     name: string;
@@ -25,7 +23,7 @@
       git: "https://github.com/vinicius-yr/vinicius.yr",
       text: "This portfolio reflect some part about me and, my thinking about the intuitive simplicity.",
       date: "Nov/09/25",
-      src: images[1][0],
+      src: portifolioImage,
     },
 
     {
@@ -35,7 +33,7 @@
       git: "https://github.com/vinicius-yr/hiragana-challenge",
       text: "A website for practicing hiragana quickly and easily, with a mini-game to test your skills rapidly.",
       date: "Sep/18/25",
-      src: images[2][0],
+      src: hiraganaImage,
     },
 
     {
@@ -45,7 +43,7 @@
       git: "https://github.com/vinicius-yr/mimo_projects",
       text: "One of the first independent projects I did after completing my programming course.",
       date: "Feb/21/24",
-      src: images[0][0],
+      src: mimoImage,
     },
   ];
 
