@@ -5,7 +5,7 @@
   let informations = [
     {
       subtitle: "Professional Summary",
-      text: `Developer with 3 years of experience, specializing in high-performance applications. Solid experience in development creating responsive and interactive interfaces, REST APIs, relational database, authentication (Auth, OAuth, JWT), and LLMs. Focused on delivering complete, optimized, and scalable solutions. Crafting efficient systems that transform complex problems into simple and intuitive user experiences.`,
+      text: `Developer with 3 years of experience, specializing in high-performance and modern applications. Solid experience in development creating responsive and interactive interfaces, REST APIs, relational database, authentication (Auth, OAuth, JWT), and LLMs. Focused on delivering complete, optimized, and scalable solutions. Crafting efficient systems that transform complex problems into simple and intuitive user experiences.`,
     },
     {
       subtitle: "Work Philosophy",
@@ -36,9 +36,7 @@
         <p class="text-sm max-w-4xl">{text}</p>
       </li>
     {/each}
-    <i id="phrase" class="text-sm"
-      >"The simple is the visible part of complexity."</i
-    >
+
     <div id="stacks" class="max-w-4xl">
       <Skills />
     </div>

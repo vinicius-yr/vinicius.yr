@@ -35,12 +35,6 @@
       icon: "fa7-brands:css",
     },
     {
-      name: "React",
-      href: "https://react.dev/",
-      tech: "frontend",
-      icon: "mdi:react",
-    },
-    {
       name: "Svelte",
       href: "https://svelte.dev/",
       tech: "frontend",
@@ -66,23 +60,10 @@
       icon: "devicon-plain:bun",
     },
     {
-      name: "Fastify",
-      href: "https://fastify.dev/",
-      tech: "backend",
-      icon: "devicon-plain:fastify",
-    },
-
-    {
       name: "SQL",
       href: "https://en.wikipedia.org/wiki/SQL",
       tech: "database",
       icon: "tabler:sql",
-    },
-    {
-      name: "PostgreSQL",
-      href: "https://www.postgresql.org/",
-      tech: "database",
-      icon: "akar-icons:postgresql-fill",
     },
     {
       name: "SQLite",
@@ -102,14 +83,6 @@
       tech: "database",
       icon: "simple-icons:drizzle",
     },
-
-    {
-      name: "Git",
-      href: "https://git-scm.com/",
-      tech: "tools",
-      icon: "mdi:git",
-    },
-
     {
       name: "Capacitor",
       href: "https://capacitorjs.com/",
@@ -122,12 +95,18 @@
       tech: "tools",
       icon: "simple-icons:wails",
     },
-  ]
+    {
+      name: "Git",
+      href: "https://git-scm.com/",
+      tech: "tools",
+      icon: "mdi:git",
+    },
+  ];
 </script>
 
 <section class="flex flex-col">
   <h1 class="text-xl">Tech Stack</h1>
-  <div class="flex flex-wrap gap-3">
+  <div class="flex flex-wrap gap-2">
     {#each techs as { href, icon }}
       <Button {href}>
         <Icon {icon} width="40" height="40" />
