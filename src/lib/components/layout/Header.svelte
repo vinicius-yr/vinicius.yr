@@ -5,7 +5,7 @@
   import { fade } from "svelte/transition";
   import { page } from "$app/state";
 
-  let width = $state(0);
+  let width = $state(1920);
   let isOpen = $state(false);
 
   let path = $derived(page.url.pathname);
