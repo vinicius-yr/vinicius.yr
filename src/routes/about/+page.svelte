@@ -24,12 +24,12 @@
   $effect(() => {
     gsap.from("#texts", { opacity: 0, stagger: 0.3 });
     gsap.from("#phrase", { opacity: 0, delay: 1.2 });
-    gsap.from("#stacks", { opacity: 0, delay: 1.5 });
+    gsap.from("#skills", { opacity: 0, delay: 1.3 });
   });
 </script>
 
 <section class="min-h-[calc(100vh-5rem)] grid place-items-center">
-  <ul class="grid gap-9 p-5">
+  <ul class="grid gap-6 p-5">
     {#each informations as { subtitle, text }}
       <li id="texts">
         <h1 class="text-xl">{subtitle}</h1>
@@ -37,7 +37,7 @@
       </li>
     {/each}
 
-    <div id="stacks" class="max-w-4xl">
+    <div id="skills" class="max-w-4xl">
       <Skills />
     </div>
   </ul>
