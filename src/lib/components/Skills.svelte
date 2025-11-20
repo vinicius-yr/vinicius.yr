@@ -19,7 +19,13 @@
       name: "Go",
       href: "https://go.dev/",
       tech: "languages",
-      icon: "file-icons:go",
+      icon: "devicon-plain:go",
+    },
+    {
+      name: "Python",
+      href: "https://www.python.org",
+      tech: "languages",
+      icon: "akar-icons:python-fill"
     },
 
     {
