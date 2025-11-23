@@ -83,7 +83,7 @@
         <h1 class="text-lg">{name}</h1>
         <p class="text-sm">{text}</p>
         <p class="text-sm">{date}</p>
-        <img {src} class=" lg:block md:block" alt="" />
+        <enhanced:img {src} />
         <div class="flex justify-between items-end w-full">
           <ul class="flex gap-2 items-center max-w- flex-wrap">
             {#each techs as tech}
