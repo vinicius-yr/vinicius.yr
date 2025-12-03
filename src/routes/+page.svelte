@@ -10,7 +10,7 @@
       icon: "mdi:github",
     },
     {
-      href: "https://www.linkedin.com/in/vinicius-y-rios-360432397",
+      href: "https://www.linkedin.com/in/vinicius-yahagi-rios-360432397",
       icon: "basil:linkedin-solid",
     },
   ];
